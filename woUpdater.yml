@@ -14,4 +14,5 @@
       ansible.windows.win_copy:
         dest: "tempDirectoryPathName.path/uaWebOffice.zip"
         src: "root@135.181.114.15/home/releases/uaWebOffice/uaWebOffice.zip"
+        remote_src: true
 

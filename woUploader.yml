@@ -1,0 +1,9 @@
+- name: UTIP Admin - Release Uploader
+  hosts: all
+  vars:
+    utipAdminArchiveName: "uaWebOffice.zip"
+  tasks:
+    - name: Uploading archive of UTIP Admin application
+      ansible.builtin.copy:
+        dest: "/home/releases/uaWebOffice/{{ utipAdminArchiveName }}"
+        src: "/home/releases/uaWebOffice/{{ utipAdminArchiveName }}"

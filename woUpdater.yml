@@ -1,0 +1,7 @@
+- name: UTIP Admin - Updater
+  hosts: all
+  tasks:
+    - name: Create temporary directory
+      ansible.windows.win_tempfile:
+        state: directory
+        suffix: files

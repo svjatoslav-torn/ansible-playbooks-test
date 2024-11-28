@@ -5,3 +5,7 @@
       ansible.windows.win_tempfile:
         state: directory
         suffix: files
+        register: tempDirectoryPathName
+
+    - name: "Debug: tempDirectoryPathName"
+      debug: var=tempDirectoryPathName.path

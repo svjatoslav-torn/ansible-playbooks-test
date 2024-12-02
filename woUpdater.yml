@@ -20,3 +20,9 @@
         url_username: "{{ ftpUser }}"
         url_password: "{{ ftpPass }}"
         force: true
+
+    - name: Unarchive
+      community.windows.win_unzip:
+        src: "{{ tempDirectoryPathName }}\\{{ utipAdminArchiveName }}"
+        dest: "{{ tempDirectoryPathName }}"
+        recurse: yes

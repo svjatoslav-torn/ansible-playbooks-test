@@ -1,0 +1,9 @@
+- name: UTIP Trader - Prepare release
+  hosts: AnsibleServer
+#  vars:
+#    destinationDir: "%TEMP%\\ansible"
+#    srcDir: "/releases/uaTrader/build/"
+#    fileName: "trader.txt"
+  tasks:
+    debug:
+      msg: "Hello World! Ebaaa"

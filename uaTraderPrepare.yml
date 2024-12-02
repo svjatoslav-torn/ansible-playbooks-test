@@ -9,7 +9,7 @@
         search_dir={{ srcDir }}/nsis
         for entry in "$search_dir"/*
         do
-        echo "$entry"
+        echo "$entry" | grep -oP "trader_([^.]*).nsis"
         done
       register: lalala
 

@@ -16,7 +16,7 @@
     - name: Uploading archive of UTIP Admin application
       ansible.windows.win_get_url:
         dest: "{{ tempDirectoryPathName }}\\{{ utipAdminArchiveName }}"
-        url: "ftp://135.181.114.15/home/releases/uaWebOffice/uaWebOffice.zip"
+        url: "ftp://135.181.114.15/releases/uaWebOffice/uaWebOffice.zip"
         url_username: ansible-ftp
         url_password: "{{ ftpPass }}"
         force: true

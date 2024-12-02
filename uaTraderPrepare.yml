@@ -11,3 +11,7 @@
         do
         echo "$entry"
         done
+      register: lalala
+
+    - name: "Debug: lalala"
+      debug: var=lalala

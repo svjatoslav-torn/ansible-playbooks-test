@@ -1,10 +1,13 @@
 - name: UTIP Trader - Prepare release
   hosts: all
-#  vars:
-#    destinationDir: "%TEMP%\\ansible"
-#    srcDir: "/releases/uaTrader/build/"
-#    fileName: "trader.txt"
+  vars:
+    srcDir: "/home/ansible-ftp/releases/uaTrader"
+    fileName: "uaTrader.txt"
   tasks:
-    - name: Hahaha
-      debug:
-        msg: "Hello World! Ebaaa"
+    - name: Run
+      ansible.builtin.shell: |
+        search_dir={{ srcDir }}/nsis
+        for entry in "$search_dir"/*
+        do
+        echo "$entry"
+        done

@@ -2,8 +2,8 @@
   hosts: all
   vars:
     destinationDir: "%TEMP%\\ansible"
-    srcDir: "/releases/uaTrader/build/"
-    fileName: "trader.txt"
+    srcDir: "/releases/uaTrader/builds/"
+    fileName: "uaTrader.txt"
   tasks:
     - name: Create temporary directory
       ansible.windows.win_file:

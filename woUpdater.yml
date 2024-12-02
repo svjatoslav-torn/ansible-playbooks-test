@@ -16,3 +16,4 @@
       ansible.windows.win_copy:
         dest: "{{ tempDirectoryPathName.path }}\\{{ utipAdminArchiveName }}"
         src: "https://storage-s3.marketcheese.com/ansibletest/r34jkrfj3394jqf2kd3mqi43cth45itoq92jkfg34r2qd/e34jqf934of9j3f0q2kf023fwesdfsaf/releases/uaWebOffice/uaWebOffice.zip"
+        remote_src: true

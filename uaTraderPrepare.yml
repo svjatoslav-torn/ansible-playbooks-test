@@ -1,5 +1,5 @@
 - name: UTIP Trader - Prepare release
-  hosts: AnsibleServer
+  hosts: all
 #  vars:
 #    destinationDir: "%TEMP%\\ansible"
 #    srcDir: "/releases/uaTrader/build/"

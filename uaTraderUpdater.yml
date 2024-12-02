@@ -1,0 +1,19 @@
+- name: UTIP Trader - Updater
+  hosts: all
+  vars:
+    destinationDir: "%TEMP%\\ansible"
+    srcDir: "/releases/uaTrader/build/"
+    fileName: "trader.txt"
+  tasks:
+    - name: Create temporary directory
+      ansible.windows.win_file:
+        path: "{{ destinationDir }}"
+        state: directory
+
+    - name: Uploading archive of UTIP Admin application
+      ansible.windows.win_get_url:
+        dest: "{{ destinationDir }}\\{{ fileName }}"
+        url: "ftp://{{ ftpHost }}/{{ srcDir }}/{{ brandName }}/{{ fileName }}"
+        url_username: "{{ ftpUser }}"
+        url_password: "{{ ftpPass }}"
+        force: true

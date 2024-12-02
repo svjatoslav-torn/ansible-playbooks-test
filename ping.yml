@@ -1,6 +1,5 @@
 - name: Ping Playbook
   hosts: all
   tasks:
-    - name: Hello Message
-      debug:
-        msg: "Hello World! Ebaaa"
+    - name: Ping
+      ansible.windows.win_ping:

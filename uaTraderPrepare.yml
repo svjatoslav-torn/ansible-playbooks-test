@@ -5,5 +5,6 @@
 #    srcDir: "/releases/uaTrader/build/"
 #    fileName: "trader.txt"
   tasks:
-    debug:
-      msg: "Hello World! Ebaaa"
+    - name: Hahaha
+      debug:
+        msg: "Hello World! Ebaaa"

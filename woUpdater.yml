@@ -3,6 +3,7 @@
   vars:
     tempDirectoryPathName: "%TEMP%\\ansible"
     utipAdminArchiveName: "uaWebOffice.zip"
+    woReleasePartPath: "releases/uaWebOffice/uaWebOffice.zip"
   tasks:
     - name: Create temporary directory
       ansible.windows.win_file:
@@ -15,5 +16,5 @@
     - name: Uploading archive of UTIP Admin application
       ansible.windows.win_get_url:
         dest: "{{ tempDirectoryPathName }}\\{{ utipAdminArchiveName }}"
-        url: "https://storage-s3.marketcheese.com/ansibletest/r34jkrfj3394jqf2kd3mqi43cth45itoq92jkfg34r2qd/e34jqf934of9j3f0q2kf023fwesdfsaf/releases/uaWebOffice/uaWebOffice.zip"
+        url: "{{ releaseBucket }}/{{ woReleasePartPath }}"
         force: true

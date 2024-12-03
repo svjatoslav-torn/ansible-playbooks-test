@@ -1,7 +1,7 @@
 - name: UTIP Trader - Updater
   hosts: all
   vars:
-    destinationDir: "%TEMP%\\ansible"
+    destinationDir: "%TEMP%\\ansible\\uaTrader"
     srcDir: "/releases/uaTrader/builds/"
     fileName: "uaTrader.txt"
   tasks:

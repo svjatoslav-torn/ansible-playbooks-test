@@ -15,7 +15,7 @@
         
         for file in "$directoryNsis"/*; do
           filename=$(basename "$file")
-          if [[ $filename =~ _([^\.]+) ]] ; then
+          if [[ $filename =~ _([^\.]+) ]]; then
             substring="${BASH_REMATCH[1]}"
             mkdir -p "$directoryBuilds/$substring"
             echo "Создана директория: $substring"

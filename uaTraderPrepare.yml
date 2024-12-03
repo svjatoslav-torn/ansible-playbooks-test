@@ -6,30 +6,30 @@
   tasks:
     - name: Run
       ansible.builtin.shell: |
-        #!/bin/bash
+#        !/bin/bash
 
-        # Указываем путь к папке
+#         Указываем путь к папке
         directoryNsis="/home/ansible-ftp/releases/uaTrader/nsis"
         directoryBuilds="/home/ansible-ftp/releases/uaTrader/builds"
 
-        # Проверяем, существует ли указанная папка
+#         Проверяем, существует ли указанная папка
         if [ ! -d "$directoryNsis" ]; then
           echo "Папка $directoryNsis не существует."
           exit 1
         fi
 
-        # Проходим по всем файлам в директории
+#         Проходим по всем файлам в директории
         for file in "$directoryNsis"/*; do
-          # Проверяем, является ли это файлом
+#           Проверяем, является ли это файлом
           if [ -f "$file" ]; then
-            # Извлекаем имя файла без пути
+#             Извлекаем имя файла без пути
             filename=$(basename "$file")
 
-            # Выделяем подстроку между "_", и "."
+#             Выделяем подстроку между "_", и "."
             if [[ $filename =~ _([^\.]+) ]] ; then
               substring="${BASH_REMATCH[1]}"
 
-              # Создаем директорию с вычлененным именем
+#               Создаем директорию с вычлененным именем
               mkdir -p "$directoryBuilds/$substring"
               echo "Создана директория: $substring"
             fi

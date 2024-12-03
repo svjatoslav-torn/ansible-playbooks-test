@@ -2,7 +2,7 @@
   hosts: all
   vars:
     destinationDir: "%TEMP%\\ansible\\uaTrader"
-    srcDir: "/releases/uaTrader/builds"
+    srcDir: "releases/uaTrader/builds"
     fileName: "uaTrader.txt"
   tasks:
     - name: Create temporary directory

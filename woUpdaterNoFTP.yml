@@ -14,6 +14,7 @@
       debug: var=tempDirectoryPathName
 
     - name: Uploading archive of UTIP Admin application
+      become: yes
       ansible.windows.win_copy:
         dest: "{{ destFilePath }}"
         src: "{{ sourceFilePath }}"

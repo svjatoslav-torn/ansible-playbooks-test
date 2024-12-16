@@ -15,6 +15,6 @@
 
     - name: Uploading archive of UTIP Admin application
       ansible.windows.win_copy:
-        dest: "{{ tempDirectoryPathName }}\\{{ utipAdminArchiveName }}"
-        src: "{{ woReleasePartPath }}"
+        dest: "%TEMP%\\ansible\\uaWebOffice\\"
+        src: "/home/releases/uaWebOffice/uaWebOffice.zip"
         force: true

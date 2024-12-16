@@ -20,3 +20,14 @@
         url_username: "{{ ftpUser }}"
         url_password: "{{ ftpPass }}"
         force: true
+
+    - name: Create temporary directory
+      ansible.windows.win_file:
+        path: "{{ tempDirectoryPathName }}\\source"
+        state: directory
+
+    - name: Unzip UTIP Admin Release
+      community.windows.win_unzip:
+        src: "{{ tempDirectoryPathName }}\\{{ utipAdminArchiveName }}"
+        dest: "{{ tempDirectoryPathName }}\\source"
+        recursive: true

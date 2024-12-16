@@ -3,7 +3,7 @@
   vars:
     tempDirectoryPathName: "%TEMP%\\ansible\\uaWebOffice"
     utipAdminArchiveName: "uaWebOffice.zip"
-    woReleasePartPath: "/home/ansible-ftp/releases/uaWebOffice/uaWebOffice.zip"
+    woReleasePartPath: "/home/releases/uaWebOffice/uaWebOffice.zip"
   tasks:
     - name: Create temporary directory
       ansible.windows.win_file:

@@ -1,8 +1,8 @@
 - name: UTIP Admin - Updater
   hosts: all
   vars:
-    destDirPath: "%TEMP%\\ansible\\uaWebOffice"
-    destFilePath: "%TEMP%\\ansible\\uaWebOffice\\uaWebOffice.zip"
+    destDirPath: "C:\\ansible\\uaWebOffice"
+    destFilePath: "C:\\ansible\\uaWebOffice\\uaWebOffice.zip"
     sourceFilePath: "/root/snap/semaphore/common/uaWebOffice.zip"
   tasks:
     - name: Create temporary directory

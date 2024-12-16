@@ -17,4 +17,5 @@
       ansible.windows.win_copy:
         dest: "{{ destFilePath }}"
         src: "{{ sourceFilePath }}"
+        backup: false
         force: true

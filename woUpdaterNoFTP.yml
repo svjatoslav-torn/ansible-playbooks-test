@@ -1,13 +1,13 @@
 - name: UTIP Admin - Updater
   hosts: all
   vars:
-    tempDirectoryPathName: "%TEMP%\\ansible\\uaWebOffice"
-    utipAdminArchiveName: "uaWebOffice.zip"
-    woReleasePartPath: "/home/releases/uaWebOffice/uaWebOffice.zip"
+    destDirPath: "%TEMP%\\ansible\\uaWebOffice"
+    destFilePath: "%TEMP%\\ansible\\uaWebOffice\\uaWebOffice.zip"
+    sourceFilePath: "/ansible/releases/uaWebOffice/uaWebOffice.zip"
   tasks:
     - name: Create temporary directory
       ansible.windows.win_file:
-        path: "{{ tempDirectoryPathName }}"
+        path: "{{ destDirPath }}"
         state: directory
 
     - name: "Debug: tempDirectoryPathName"
@@ -15,6 +15,6 @@
 
     - name: Uploading archive of UTIP Admin application
       ansible.windows.win_copy:
-        dest: "%TEMP%\\ansible\\uaWebOffice\\"
-        src: "/home/releases/uaWebOffice/uaWebOffice.zip"
+        dest: "{{ destFilePath }}"
+        src: "{{ sourceFilePath }}"
         force: true

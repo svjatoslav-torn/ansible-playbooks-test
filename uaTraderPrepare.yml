@@ -5,8 +5,9 @@
     fileName: "uaTrader.txt"
   tasks:
     - name: Chmod for prepare.sh
-      file: "{{ srcDir }}/scripts/prepare.sh"
-      mode: "a+x"
+      file:
+        path: "{{ srcDir }}/scripts/prepare.sh"
+        mode: "a+x"
     - name: Run script
       ansible.builtin.shell: "{{ srcDir }}/scripts/prepare.sh"
       register: lalala

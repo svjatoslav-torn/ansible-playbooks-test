@@ -1,6 +1,6 @@
 - name: UTIP Admin - Updater
   hosts: all
-  strategy: free
+  gather_facts: false
   vars:
     tempDirectoryPathName: "C:\\Program Files\\Ansible\\releases\\uaWebOffice"
     utipAdminArchiveName: "uaWebOffice.zip"

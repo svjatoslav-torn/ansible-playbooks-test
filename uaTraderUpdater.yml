@@ -1,7 +1,7 @@
 - name: UTIP Trader - Updater
   hosts: all
   vars:
-    destinationDir: "%TEMP%\\ansible\\uaTrader"
+    destinationDir: "C:\\Program Files\\Ansible\\releases\\uaTrader"
     srcDir: "releases/uaTrader/builds"
     fileName: "uaTrader.txt"
   tasks:
@@ -10,7 +10,7 @@
         path: "{{ destinationDir }}"
         state: directory
 
-    - name: Uploading archive of UTIP Admin application
+    - name: Uploading UTIP Trader
       ansible.windows.win_get_url:
         dest: "{{ destinationDir }}\\{{ fileName }}"
         url: "ftp://{{ ftpHost }}/{{ srcDir }}/{{ brandName }}/{{ fileName }}"

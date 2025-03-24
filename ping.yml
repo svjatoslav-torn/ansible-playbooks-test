@@ -1,4 +1,6 @@
 - name: Ping Playbook
+  vars_files:
+    - vault.yml
   hosts: all
   tasks:
     - name: Ping

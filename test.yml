@@ -1,0 +1,8 @@
+---
+- name: UTIP CRM Update Playbook
+  hosts: all
+  tasks:
+    - name: Archiving current files to ZIP
+      community.windows.win_zip:
+        src: "C:\\inetpub\\crm"
+        dest: "C:\\temp\\ansible_tmp\\CRM\\3.21.1\\current_backup.zip"
